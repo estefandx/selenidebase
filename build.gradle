@@ -1,0 +1,20 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.epamcourse.selenidebase'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation group: 'org.testng', name: 'testng', version: '7.10.2'
+    implementation group: 'com.codeborne', name: 'selenide', version: '7.6.1'
+
+}
+
+test {
+    useTestNG()
+}
