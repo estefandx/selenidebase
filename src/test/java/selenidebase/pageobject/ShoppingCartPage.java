@@ -43,18 +43,18 @@ public class ShoppingCartPage {
     public void addNumberItems(int numberItems, int positionItem) {
         for (int i = 1; i < numberItems; i++) {
             try {
-                // Obtener la lista actualizada de elementos en cada iteración
+
                 SelenideElement item = $$(actionLinksItems).get(positionItem)
                         .$x(".//button[@data-a-selector='increment']");
                 item.click();
                 Thread.sleep(1000);
             } catch (StaleElementReferenceException e) {
                 System.out.println("Obsolete item found, retrying... Exception: " + e.getMessage());
-                i--;  // Decrementar para reintentar
-                sleep(500);  // Pausa opcional para esperar que el DOM se estabilice
+                i--;
+                sleep(500);
             } catch (Exception e) {
                 System.out.println("Unexpected error: " + e.getMessage());
-                break;  // Salir del bucle si ocurre cualquier otra excepción no controlada
+                break;
             }
         }
     }
