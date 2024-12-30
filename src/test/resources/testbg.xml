@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Pruebas SourceDemo"  parallel="classes" thread-count="3">
+    <test name="search book test">
+        <parameter name="url" value="urlamazonbooks" />
+        <classes>
+            <class name="selenidebase.test.BaseTest"/>
+
+            <class name="selenidebase.test.BookDepositoryTest"/>
+        </classes>
+    </test>
+</suite>
