@@ -11,7 +11,7 @@ import java.time.format.DateTimeFormatter;
 public class ScreenshotUtil {
 
 
-    private static final String SCREENSHOTS_FOLDER = "test-screenshots"; // Sin el "/"
+    private static final String SCREENSHOTS_FOLDER = "test-screenshots";
     private static final String DATE_FORMAT = "yyyy-MM-dd_HH-mm-ss";
 
     public static void takeScreenshot(String screenshotPath) {
@@ -29,7 +29,7 @@ public class ScreenshotUtil {
         String fileName = SCREENSHOTS_FOLDER + "/" + testName + "_" + resultStatus + "_" + timestamp;
 
         try {
-            Files.createDirectories(Paths.get(SCREENSHOTS_FOLDER)); // Crear la carpeta si no existe
+            Files.createDirectories(Paths.get(SCREENSHOTS_FOLDER));
         } catch (IOException e) {
             e.printStackTrace();
         }
