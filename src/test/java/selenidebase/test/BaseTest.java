@@ -7,12 +7,15 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Parameters;
 import selenidebase.config.ConfigReader;
 import selenidebase.hook.DriverManager;
 
 import static com.codeborne.selenide.Selenide.open;
 
+
+@Listeners(selenidebase.listeners.ScreenshotListener.class)
 public class BaseTest {
 
     @BeforeMethod
